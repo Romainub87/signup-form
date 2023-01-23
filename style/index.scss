@@ -1,8 +1,17 @@
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$Dark_Blue: hsl(249, 10%, 26%);
+$Grayish_Blue: hsl(246, 25%, 77%);
+$Dark_Green: hsl(154, 51%, 41%);
+
+
 body {
     margin: 0;
     padding: 0;
-    background: fixed url("../images/bg-intro-desktop.png");
-    background-color: hsl(0%, 100%, 74%);
+    background: url("../images/bg-intro-desktop.png");
+    background-color: $Red;
+    font-family: Poppins;
 
     .content {
         display: flex;
@@ -10,5 +19,215 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        align-items: center;
+        width: 64vw;
+        height: max-content;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1100px) {
+            display: flex;
+            width: 100vw;
+            height: 100%;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        .div-left {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 59px;
+            margin-left: 0px;
+
+            @media screen and (max-width: 1100px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                margin: 0;
+                padding-top: 60px;
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .title-left {
+                font-size: 55px;
+                color: white;
+                line-height: 1;
+                font-weight: bold;
+
+                @media screen and (max-width: 1100px) {
+                    font-size: 30px;
+                }
+            }
+
+            .text-left {
+                margin-top: 30px;
+                font-size: 17px;
+                color: white;
+                letter-spacing: 0.3px;
+                font-weight: 500;
+
+                @media screen and (max-width: 1100px) {
+                    font-size: 13px;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .div-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+
+            @media screen and (max-width: 1100px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 100%;
+                margin: 0;
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 50px;
+            }
+
+            .price-banner {
+                width: 100%;
+                background-color: $Blue;
+                text-align: center;
+                color: white;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                padding: 20px;
+                padding-top: 23px;
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 30px;
+                box-shadow: 0px 7px 0px 0px rgba(98, 82, 82, 0.4);
+                border-radius: 10px;
+                
+
+                @media screen and (max-width: 1100px) {
+                    font-size: 15px;
+                    margin: 20px;
+                    padding-top: 17px;
+                    padding: 15px;
+                    width: 90%;
+
+                    .text-banner {
+                        margin-left: 50px;
+                        margin-right: 50px;
+                        padding: 0;
+                        font-size: 14px;
+                    }
+
+                   
+                }
+
+                .price-text {
+                    color: $Grayish_Blue;
+                    font-weight: 500;
+                }
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                padding: 5%;
+                width: 90%;
+                background-color: white;
+                box-shadow: 0px 7px 0px 0px rgba(98, 82, 82, 0.4);
+                border-radius: 10px;
+
+                .input {
+                    padding: 20px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    font-weight: 700;
+                    border-radius: 7px;
+                    border: grey 1px solid;
+                    margin-bottom: 25px;
+
+                    &:hover {
+                        border: black 1px solid;
+                    }
+
+                    @media screen and (max-width: 1100px) {
+                        font-size: 13px;
+                        margin: 7px;
+                        padding: 15px;
+                        padding-left: 15px;
+                    }
+                }
+
+                .err {
+                    color: red;
+                    font-style: italic;
+                    font-size: 13px;
+                    text-align: right;
+                    margin: 5px;
+                    margin-bottom: 20px;
+                    font-weight: 600;
+
+                    @media screen and (max-width: 1100px) {
+                        font-size: 10px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .bouton {
+                    margin: 10px;
+                    margin-top: 5px;
+                    padding: 15px;
+                    margin-bottom: 0;
+                    padding-top: 20px;
+                    background-color: $Green;
+                    border: none;
+                    color: white;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    border-radius: 5px;
+                    box-shadow: 0px 4px 0px 0px $Dark_Green;
+
+                    @media screen and (max-width: 1100px) {
+                        font-size: 15px;
+                        margin: 7px;
+                        padding: 15px;
+                        padding-left: 15px;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgba($color: $Green, $alpha: 0.8);
+                    }
+                }
+
+                .under-form {
+                    text-align: center;
+                    margin-top: 15px;
+                    margin-bottom: 20px;
+                    font-size: 14px;
+                    color: $Grayish_Blue;
+
+                    @media screen and (max-width: 1100px) {
+                        font-size: 10px;
+                        width: 70%;
+                        margin: auto;
+                        margin-top: 5px;
+    
+                       
+                    }
+
+                    .terms {
+                        color: $Red;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
     }
 }
