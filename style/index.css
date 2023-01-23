@@ -6,6 +6,33 @@ body {
   font-family: Poppins;
 }
 
+body .dev {
+  color: white;
+  margin-left: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+body .dev .lien-dev {
+  text-decoration: none;
+  color: white;
+}
+
+body .challenge {
+  position: absolute;
+  color: white;
+  margin-right: 15px;
+  bottom: 0;
+  right: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+body .challenge .lien-frontend-mentor {
+  text-decoration: none;
+  color: white;
+}
+
 body .content {
   display: flex;
   position: absolute;
