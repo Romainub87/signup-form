@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: fixed url("../images/bg-intro-desktop.png");
+    background-color: hsl(0%, 100%, 74%);
+
+    .content {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
